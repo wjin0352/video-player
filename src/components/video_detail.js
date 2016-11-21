@@ -5,8 +5,8 @@ class VideoDetail extends Component {
     super(props);
   }
 
-  handleClickButton() {
-
+  handleClickButton(video) {
+    console.log(video)
   }
 
   render() {
@@ -26,7 +26,7 @@ class VideoDetail extends Component {
         <div className="details">
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
-          <button className="btn btn-primary" onClick={() => this.handleClickButton} >Save to list</button>
+          <button className="btn btn-primary" onClick={() => this.handleClickButton(video)} >Save to list</button>
         </div>
       </div>
     );
