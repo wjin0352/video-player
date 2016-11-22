@@ -23,7 +23,9 @@ VideoController.prototype.createVideo = (req, res) => {
     Video.create({
       url: req.body.url,
       title: req.body.title,
-      description: req.body.description
+      description: req.body.description,
+      publishedAt: req.body.publishedAt,
+      image: req.body.image
     }, (error, video) => {
       if(error) {
         reject(error);
