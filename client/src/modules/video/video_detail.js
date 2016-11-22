@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { saveVideo } from  './videoActions';
 
 class VideoDetail extends Component {
   constructor(props) {
@@ -6,7 +8,16 @@ class VideoDetail extends Component {
   }
 
   handleClickButton(video) {
-    console.log(video)
+    var title = video.snippet.title;
+    var description = video.snippet.description;
+    var url = video.id.videoId;
+    const videoInfo = {
+      title,
+      description,
+      url
+    }
+    console.log(videoInfo)
+    this.props.saveVideo(videoInfo);
   }
 
   render() {
@@ -33,4 +44,10 @@ class VideoDetail extends Component {
   }
 };
 
-export default VideoDetail;
+function mapStateToProps(state) {
+  return {
+    savedVideo: state.savedVideo
+  };
+}
+
+export default connect(mapStateToProps , { saveVideo })(VideoDetail);

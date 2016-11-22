@@ -3,5 +3,5 @@ const mainRouter = require('../api/main/main.router');
 
 module.exports = (app) => {
   app.use('/', mainRouter);
-  app.use('/videos', videoRouter);
+  app.use('/', videoRouter);
 }

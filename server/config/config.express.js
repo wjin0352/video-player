@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../../webpack.config';
+// import path from 'path';
 
 module.exports = function(app) {
   app.use(webpackMiddleware(webpack(webpackConfig)));
