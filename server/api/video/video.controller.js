@@ -40,4 +40,23 @@ VideoController.prototype.createVideo = (req, res) => {
   });
 }
 
+VideoController.prototype.deleteVideo = (req, res) => {
+  return new Promise((resolve, reject) => {
+    console.log(req.body)
+    Video.findByIdAndRemove({
+      _id: req.params.id
+    }, (error, video) => {
+      if(error) {
+        reject(error);
+      } else {
+        resolve(video);
+      }
+    });
+  }).then((video) => {
+    res.status(200).json(video);
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+
 module.exports = VideoController.prototype;

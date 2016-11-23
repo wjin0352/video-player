@@ -17,6 +17,14 @@ const favoriteVideos = (state = initialState, action) => {
         ...state,
         error: action.error
       }
+    case 'UPDATE_FEED':
+      // console.log('state.videos: ',state.videos)
+      return {
+        ...state,
+        videos: [
+          ...state.videos.filter(video => { return video._id !== action.id })
+        ]
+      }
   default:
     return state;
   }

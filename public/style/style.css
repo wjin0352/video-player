@@ -42,3 +42,14 @@
 .videos_feed {
   margin-top: 4em;
 }
+
+/* Modal Video player */
+
+.video-modal .modal-content {
+  text-align: center;
+}
+
+.iframe-video-feed {
+  width: 850px;
+  height: 750px;
+}

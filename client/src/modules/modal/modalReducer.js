@@ -5,12 +5,11 @@ const initalState = {
   description: '',
   url: '',
   title: '',
-  publishedAt: ''
+  publishedAt: '',
+  _id: ''
 }
 
 const modalReducer = (state = initalState, action) => {
-  console.log('action: ', action)
-  console.log('state: ', state)
   switch(action.type) {
     case 'CREATE_MODAL':
       return {

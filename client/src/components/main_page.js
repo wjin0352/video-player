@@ -17,7 +17,7 @@ class MainPage extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('surfboards');
+    this.videoSearch('movie trailers');
   }
 
   videoSearch(term) {

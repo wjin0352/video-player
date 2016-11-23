@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Modal } from 'react-bootstrap';
 import { closeModal } from './modalActions';
+import { deleteVideo } from '../deleteVideo/deleteVideoAction';
+import variables from '../../utils/variables.client';
 
 const ModalComponent = ({
-  modalVideo: { show, title, url, description, publishedAt },
-  closeModal
+  modalVideo: { show, title, url, description, publishedAt, _id },
+  closeModal,
+  deleteVideo
 }) => {
   return (
     <Modal className="video-modal" show={show} bsSize="large" aria-labelledby="contained-modal-title-lg">
@@ -14,14 +17,23 @@ const ModalComponent = ({
       </Modal.Header>
       <Modal.Body>
         <p>{description}</p>
-        <iframe className='iframe-video-feed' src={`DEV_URL${url}`}
+        <iframe className='iframe-video-feed' src={`${variables.YOUTUBE_URL}${url}`}
         allowFullScreen>
         </iframe>
         <span>{publishedAt}</span>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={
-          () => closeModal()}>Close</Button>
+        <Button
+          onClick={() => closeModal()}>
+          Close
+        </Button>
+
+        <Button
+          onClick={() => {
+            deleteVideo(_id)
+          }}>
+          Delete
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -33,4 +45,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { closeModal })(ModalComponent);
+export default connect(mapStateToProps, { closeModal, deleteVideo })(ModalComponent);

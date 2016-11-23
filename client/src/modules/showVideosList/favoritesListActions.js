@@ -1,9 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-const DEV_URL = "http://localhost:5000";
-const PROD_URL = "https://shrouded-mesa-30974.herokuapp.com/";
-
 /* Favorites video list */
   export function favoritesList() {
     return (dispatch) => {
@@ -29,5 +26,12 @@ const PROD_URL = "https://shrouded-mesa-30974.herokuapp.com/";
     return {
       type: 'FAVORITES_ERROR',
       error
+    };
+  }
+
+  export function updateVideoFeed(id) {
+    return {
+      type: 'UPDATE_FEED',
+      id
     };
   }
