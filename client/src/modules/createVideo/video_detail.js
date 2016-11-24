@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { saveVideo } from  './videoActions';
+import { Link } from 'react-router';
+import { Button } from 'react-bootstrap'
 
 class VideoDetail extends Component {
   constructor(props) {
@@ -42,6 +44,9 @@ class VideoDetail extends Component {
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
           <button className="btn btn-primary" onClick={() => this.handleClickButton(video)} >Save to list</button>
+          <Link className="favorites-list-link" to="/favorites-list">
+            <Button bsStyle="warning">Favorites List</Button>
+          </Link>
         </div>
       </div>
     );

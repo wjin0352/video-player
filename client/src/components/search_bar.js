@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { Button } from 'react-bootstrap'
 
 class SearchBar extends Component {
   constructor(props) {
@@ -15,9 +13,7 @@ class SearchBar extends Component {
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)}
         />
-        <Link className="favorites-list-link" to="/favorites-list">
-          <Button bsStyle="default">Favorites List</Button>
-        </Link>
+
       </div>
     );
   }

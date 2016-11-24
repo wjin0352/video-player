@@ -4,18 +4,17 @@ import { Button, ButtonGroup, Navbar, Nav, MenuItem, NavDropdown, NavItem } from
 
 const Header = () => {
   return (
-    <Navbar className="navbar" bsStyle='inverse'>
-        <Navbar.Header>
-          <Navbar.Brand>
-            Social Media Blog
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          <NavItem eventKey={1}>
-            <Link className='home_link' to="/">Home</Link>
-          </NavItem>
-        </Nav>
-      </Navbar>
+    <Navbar className="header-navbar" bsStyle='inverse'>
+      <Navbar.Header>
+        <Navbar.Brand>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <NavItem eventKey={1}>
+          <Link className='home_link' to="/">Home</Link>
+        </NavItem>
+      </Nav>
+    </Navbar>
   );
 }
 

@@ -20,8 +20,9 @@ class MainPage extends Component {
     this.videoSearch('movie trailers');
   }
 
+  // var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
   videoSearch(term) {
-    YTSearch({key: variables.API_KEY, term: term}, (videos) => {
+    YTSearch({key: variables.API_KEY, term: term, maxResults: 20}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]

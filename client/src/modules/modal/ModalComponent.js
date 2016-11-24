@@ -23,17 +23,23 @@ const ModalComponent = ({
         <span>{publishedAt}</span>
       </Modal.Body>
       <Modal.Footer>
-        <Button
-          onClick={() => closeModal()}>
-          Close
-        </Button>
+        <div className="modal-buttons">
+          <Button
+            onClick={() => closeModal()}
+            className="btn btn-default"
+            >
+            Close
+          </Button>
 
-        <Button
-          onClick={() => {
-            deleteVideo(_id)
-          }}>
-          Delete
-        </Button>
+          <Button
+            onClick={() => {
+              deleteVideo(_id)
+            }}
+            className="btn btn-danger"
+            >
+            Delete
+          </Button>
+        </div>
       </Modal.Footer>
     </Modal>
   );

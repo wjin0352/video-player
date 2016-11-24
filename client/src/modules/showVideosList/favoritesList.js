@@ -19,8 +19,8 @@ class FavoritesList extends Component {
 
   renderVideos(video) {
     return (
-        <Col xs={4} md={3} className="video-single-feed" key={video._id}>
-          <Thumbnail src={video.image} alt="242x200" className="video-image-thumbnail">
+        <Col xs={4} md={3} className="video_single_feed" key={video._id}>
+          <Thumbnail src={video.image} alt="242x200" className="video_image_thumbnail">
             <h3>{video.title}</h3>
             <p>
               {video.description}
