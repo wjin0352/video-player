@@ -1,6 +1,6 @@
-import express from 'express'
 require('babel-register');
 require('babel-polyfill');
+import express from 'express'
 let app = express();
 
 const variables = require('./server/config/variables.express');
