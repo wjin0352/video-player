@@ -7,7 +7,7 @@
   "scripts": {
     "start-local": "nodemon --watch server --exec babel-node -- server.js",
     "server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "start" : "node server.js"
+    "start" : "node server.js --exec babel-node -- server.js"
   },
   "author": "",
   "license": "ISC",
