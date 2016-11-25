@@ -9,7 +9,7 @@ require('./server/config/config.express')(app);
 require('./server/config/routes.express')(app);
 
 // to push to production heroku you need to listen on process.env.PORT
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(variables.EXPRESS_LISTEN_MESSAGE + variables.EXPRESS_PORT);
