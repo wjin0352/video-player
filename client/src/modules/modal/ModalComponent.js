@@ -16,10 +16,12 @@ const ModalComponent = ({
         <Modal.Title id="contained-modal-title-lg">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>{description}</p>
-        <iframe className='iframe-video-feed' src={`${variables.YOUTUBE_URL}${url}`}
-        allowFullScreen>
-        </iframe>
+        <div className="iframe_modal_video">
+          <p className="modal-para">{description}</p>
+          <iframe className='iframe-video-feed' src={`${variables.YOUTUBE_URL}${url}`}
+          allowFullScreen>
+          </iframe>
+        </div>
         <span>{publishedAt}</span>
       </Modal.Body>
       <Modal.Footer>

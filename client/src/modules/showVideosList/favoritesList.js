@@ -21,8 +21,8 @@ class FavoritesList extends Component {
     return (
         <Col xs={4} md={3} className="video_single_feed" key={video._id}>
           <Thumbnail src={video.image} alt="242x200" className="video_image_thumbnail">
-            <h3>{video.title}</h3>
-            <p>
+            <h3 className="single_video_title">{video.title}</h3>
+            <p className="single_video_description">
               {video.description}
             </p>
             <Button bsStyle="primary" onClick={
