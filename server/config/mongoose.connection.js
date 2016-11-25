@@ -3,7 +3,7 @@ const config = require('./variables.express');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(config.MONGODB.URI, (err, database) => {
+mongoose.connect(config.MONGOLAB_URI, (err, database) => {
   if(err) {
     console.log('error connecting to database...ERROR: ', err);
     process.exit(1);

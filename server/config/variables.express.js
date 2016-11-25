@@ -5,5 +5,5 @@ module.exports = {
     PORT: '',
     URI: 'mongodb://localhost/videos'
   },
-  MONGOLAB_URI: ""
+  MONGOLAB_URI: "mongodb://<wjin>:<wjin>@ds163397.mlab.com:63397/youtube"
 };
