@@ -5,7 +5,6 @@
   "main": "./client/src/index.js",
   "repository": "",
   "scripts": {
-    "postinstall": "webpack -p",
     "start": "node index.js"
   },
   "author": "",
