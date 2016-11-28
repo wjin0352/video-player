@@ -5,6 +5,7 @@
   "main": "./client/src/index.js",
   "repository": "",
   "scripts": {
+    "watch:js": "webpack --watch",
     "start": "node index.js"
   },
   "author": "",
