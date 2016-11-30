@@ -129,7 +129,7 @@
 
     .video_single_feed {
       height:470px;
-      transition: height 2s;
+      /*transition: height 2s;*/
     }
 
     .video_single_feed .btn {
@@ -149,13 +149,13 @@
 
       width: 646px;
       height: 476px;
-      transition: height 2s, width 2s;
+      /*transition: height 2s, width 2s;*/
       display: block;
     }
 
     .video-modal .modal-content {
       width: 676px;
-      transition: width 2s;
+      /*transition: width 2s;*/
     }
   }
 
@@ -172,7 +172,7 @@
   .video_single_feed {
     width: 100%;
     height: 100%;
-    transition: height 2s, width 2s;
+    /*transition: height 2s, width 2s;*/
   }
 
   .single_video_title {
@@ -195,7 +195,7 @@
   .iframe-video-feed {
     width: 100%;
     height: 431px;
-    transition: height 2s, width 2s;
+    /*transition: height 2s, width 2s;*/
     display: block;
   }
 }
@@ -213,7 +213,7 @@
   .video_single_feed {
     width: 100%;
     height: 540px;
-    transition: height 2s, width 2s;
+    /*transition: height 2s, width 2s;*/
   }
 
   .single_video_title {
@@ -246,7 +246,7 @@
 
   .embed-responsive {
     height: 300px;
-    transition: height 2s;
+    /*transition: height 2s;*/
   }
 
   .video-detail {
@@ -259,6 +259,6 @@
     display: block;
     width: 300px;
     height: 300px;
-    transition: height 2s, width 2s;
+    /*transition: height 2s, width 2s;*/
   }
 }
