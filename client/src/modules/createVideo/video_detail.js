@@ -43,9 +43,9 @@ class VideoDetail extends Component {
         <div className="details">
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
-          <button className="btn btn-primary" onClick={() => this.handleClickButton(video)} >Save to list</button>
+          <button className="btn save_btn" onClick={() => this.handleClickButton(video)} >Save to list</button>
           <Link className="favorites-list-link" to="/favorites-list">
-            <Button bsStyle="warning">Favorites List</Button>
+            <Button className="list_btn">Favorites List</Button>
           </Link>
         </div>
       </div>

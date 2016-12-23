@@ -35,6 +35,16 @@
   margin-top: 1em;
 }
 
+.list_btn {
+  background-color: black;
+  color: #f53131;
+}
+
+.save_btn {
+  background-color: black;
+  color: #1c71e0;
+}
+
 .details .favorites-list-link {
   margin-left: 5px;
 }
@@ -111,6 +121,24 @@
 .modal-buttons button {
   margin: 0em 3px;
 }
+
+/* bootstrap popovers */
+  .more_btn {
+    background-color: black;
+    /*color: #e4b90e;*/
+    color:#f53131;
+    margin-bottom: .2em;
+    margin-right: 0.5em;
+  }
+
+  .popover {
+    /*max-width: 30%;*/
+    background-color:#f0ad4e;
+  }
+
+  .popover-title {
+    background-color:#f0ad4e;
+  }
 
 /* ============= media queries =============== */
 /* tablet to desktop */
@@ -200,6 +228,15 @@
   }
 }
 
+@media only screen and (max-width : 423px) {
+  .details .favorites-list-link {
+    margin-left: 0px;
+  }
+
+  .details button {
+    margin-top: .3em;
+  }
+}
 
 @media only screen and (max-width : 355px) {
   .video-detail {
