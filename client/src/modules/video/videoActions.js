@@ -9,7 +9,6 @@ const PROD_URL = "https://shrouded-mesa-30974.herokuapp.com/";
     return (dispatch) => {
       axios.post('/videos', {...video})
       .then(response => {
-        console.log('the RESPONSE>JSON: ',response.data)
         dispatch(videoSuccess(response.data));
       })
       .catch(err => {

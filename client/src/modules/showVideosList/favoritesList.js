@@ -19,22 +19,22 @@ class FavoritesList extends Component {
 
   renderVideos(video) {
     return (
-        <Col xs={4} md={3} className="video_single_feed" key={video._id}>
-          <Thumbnail src={video.image} alt="242x200" className="video_image_thumbnail">
-            <h3 className="single_video_title">{video.title}</h3>
-            <p className="single_video_description">
-              {video.description}
-            </p>
-            <Button bsStyle="primary" onClick={
-              () => this.handleModal(video)}
-              >Watch</Button>&nbsp;
-          </Thumbnail>
-        </Col>
+      <Col xs={4} md={3} className="video_single_feed" key={video._id}>
+        <Thumbnail src={video.image} alt="242x200" className="video_image_thumbnail">
+          <h3 className="single_video_title">{video.title}</h3>
+          <p className="single_video_description">
+            {video.description}
+          </p>
+          <Button bsStyle="primary" onClick={
+            () => this.handleModal(video)}
+            >Watch</Button>&nbsp;
+        </Thumbnail>
+      </Col>
     );
   }
 
   render() {
-    const videos = this.props.videos
+    const videos = this.props.videos.reverse();
     return (
       <div>
       <Header />

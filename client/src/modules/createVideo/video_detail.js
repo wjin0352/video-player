@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { saveVideo } from  './videoActions';
 import { Link } from 'react-router';
-import { Button } from 'react-bootstrap'
+import { Button, OverlayTrigger, ButtonToolbar, Popover } from 'react-bootstrap'
 
 class VideoDetail extends Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class VideoDetail extends Component {
       image,
       publishedAt
     }
-    // console.log(videoInfo)
     this.props.saveVideo(videoInfo);
   }
 
@@ -31,9 +30,14 @@ class VideoDetail extends Component {
     if (!video) {
       return <div>Loading...</div>;
     }
-
+    
     const videoId = video.id.videoId;
     const url = `https://www.youtube.com/embed/${videoId}`;
+    const popoverFocus = (
+      <Popover id="popover-trigger-focus" title="Thanks">
+        <strong>Your video was successfully saved to the list!</strong>
+      </Popover>
+    );
 
     return (
       <div className="video-detail col-md-8">
@@ -43,7 +47,9 @@ class VideoDetail extends Component {
         <div className="details">
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
-          <button className="btn save_btn" onClick={() => this.handleClickButton(video)} >Save to list</button>
+          <OverlayTrigger trigger="focus" placement="top"  overlay={popoverFocus}>
+             <Button className="btn save_btn" id="popover" onClick={() => this.handleClickButton(video)}>Save to list</Button>
+           </OverlayTrigger>
           <Link className="favorites-list-link" to="/favorites-list">
             <Button className="list_btn">Favorites List</Button>
           </Link>
