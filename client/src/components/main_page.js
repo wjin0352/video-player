@@ -37,12 +37,13 @@ class MainPage extends Component {
     return (
       <div className="main_page">
         <SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail video={selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
-          videos={videos} />
-
-        <div>{this.props.children}</div>
+          <container className="videos_container z-depth-5">
+            <VideoDetail video={selectedVideo} />
+            <VideoList
+              onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+              videos={videos} />
+            <div>{this.props.children}</div>
+          </container>
       </div>
     );
   }

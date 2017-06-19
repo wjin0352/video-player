@@ -10,17 +10,20 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar">
-        <div id="title_container">
+        <div id="title_container" className="">
           <h2 id="title">Video Saver</h2>
           <p>Search for videos faster without ads then save them to a list for easy viewing later!
           </p>
         </div>
-        <Button className="btn btn-primary" id="search_button" onClick={event => this.onInputChange(event.target.value)}>Submit</Button>
-        <input
-          value={this.state.term}
-          placeholder=' Type in your search here '
-          onChange={event => this.onInputChange(event.target.value)}
-        />
+        <div className="divider"></div>
+        <div className="input_container">
+          <input 
+            id="search_input"
+            value={this.state.term}
+            placeholder=' Type in your search here '
+            onChange={event => this.onInputChange(event.target.value)}
+          />
+        </div>
       </div>
     );
   }

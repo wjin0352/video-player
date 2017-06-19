@@ -48,10 +48,10 @@ class VideoDetail extends Component {
           <div>{video.snippet.title}</div>
           <div>{video.snippet.description}</div>
           <OverlayTrigger trigger="focus" placement="top"  overlay={popoverFocus}>
-             <Button className="btn save_btn" id="popover" onClick={() => this.handleClickButton(video)}>Save to list</Button>
+             <Button className="btn save_btn deep-purple accent-1 waves-effect waves-orange" id="popover" onClick={() => this.handleClickButton(video)}>Save to list</Button>
            </OverlayTrigger>
           <Link className="favorites-list-link" to="/favorites-list">
-            <Button className="list_btn">Favorites List</Button>
+            <Button className="list_btn blue accent-1">Favorites List</Button>
           </Link>
         </div>
       </div>
