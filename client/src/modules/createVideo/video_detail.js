@@ -40,7 +40,7 @@ class VideoDetail extends Component {
     );
 
     return (
-      <div className="video-detail col-md-8">
+      <div className="video-detail col-md-7 col-lg-8 z-depth-2">
         <div className="embed-responsive embed-responsive-16by9">
           <iframe className="embed-responsive-item" src={url} allowFullScreen ></iframe>
         </div>
@@ -51,7 +51,7 @@ class VideoDetail extends Component {
              <Button className="btn save_btn deep-purple accent-1 waves-effect waves-orange" id="popover" onClick={() => this.handleClickButton(video)}>Save to list</Button>
            </OverlayTrigger>
           <Link className="favorites-list-link" to="/favorites-list">
-            <Button className="list_btn blue accent-1">Favorites List</Button>
+            <Button id="details_btn" className="list_btn blue accent-1">Favorites List</Button>
           </Link>
         </div>
       </div>
