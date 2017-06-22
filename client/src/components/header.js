@@ -1,20 +1,13 @@
 import React from 'react';
-import { Link, IndexLink } from 'react-router';
-import { Button, ButtonGroup, Navbar, Nav, MenuItem, NavDropdown, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 const Header = () => {
   return (
-    <Navbar className="header-navbar" bsStyle='inverse'>
-      <Navbar.Header>
-        <Navbar.Brand>
-        </Navbar.Brand>
-      </Navbar.Header>
-      <Nav>
-        <NavItem eventKey={1}>
-          <Link className='home_link' to="/">Home</Link>
-        </NavItem>
-      </Nav>
-    </Navbar>
+    <nav className="blue lighten-1">
+      <div className="nav-wrapper">
+        <Link id="home_link" className='home_link brand-logo waves-light center btn btn-large z-depth-2' to="/">Home</Link>
+      </div>
+    </nav>
   );
 }
 

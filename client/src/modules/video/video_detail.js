@@ -20,7 +20,6 @@ class VideoDetail extends Component {
       image,
       publishedAt
     }
-    // console.log(videoInfo)
     this.props.saveVideo(videoInfo);
   }
 

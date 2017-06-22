@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { saveVideo } from  './videoActions';
 import { Link } from 'react-router';
 import { Button, OverlayTrigger, ButtonToolbar, Popover } from 'react-bootstrap'
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 class VideoDetail extends Component {
   constructor(props) {
