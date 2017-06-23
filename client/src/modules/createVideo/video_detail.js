@@ -26,20 +26,7 @@ class VideoDetail extends Component {
     this.props.saveVideo(videoInfo);
   }
 
-  render() {
-    const video = this.props.video;
-    if (!video) {
-      return <div>Loading...</div>;
-    }
-    
-    const videoId = video.id.videoId;
-    const url = `https://www.youtube.com/embed/${videoId}`;
-    const popoverFocus = (
-      <Popover id="popover-trigger-focus" title="Thanks">
-        <strong>Your video was successfully saved to the list!</strong>
-      </Popover>
-    );
-
+  videoDetailCardBootStrap(video, url, popoverFocus) {
     return (
       <div className="video-detail col-md-7 col-lg-8 z-depth-2">
         <div className="embed-responsive embed-responsive-16by9">
@@ -56,6 +43,23 @@ class VideoDetail extends Component {
           </Link>
         </div>
       </div>
+    );
+  }
+
+  render() {
+    const video = this.props.video;
+    if (!video) {
+      return <div>Loading...</div>;
+    }
+    const videoId = video.id.videoId;
+    const url = `https://www.youtube.com/embed/${videoId}`;
+    const popoverFocus = (
+      <Popover id="popover-trigger-focus" title="Thanks">
+        <strong>Your video was successfully saved to the list!</strong>
+      </Popover>
+    );
+    return (
+      this.videoDetailCardBootStrap(video, url, popoverFocus)
     );
   }
 };

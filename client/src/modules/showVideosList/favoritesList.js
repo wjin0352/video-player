@@ -46,10 +46,10 @@ class FavoritesList extends Component {
       <div>
         <div style={styles.root}>
           <GridList
+            padding={2}
             cellHeight={320}
             style={styles.videosSimple}
           >
-            <Subheader>Results: </Subheader>
             {videos.map((video) => (
               <GridTile
                 onClick={() => this.handleModal(video)}
@@ -71,10 +71,10 @@ class FavoritesList extends Component {
     return (
       <div style={styles.root}>
         <GridList
+          padding={2}
           cellHeight={270}
           style={styles.videosComplex}
         >
-          <Subheader>Search results: </Subheader>
           {videos.map((video, idx) => (
             <GridTile
               onClick={() => this.handleModal(video)}
@@ -104,7 +104,7 @@ class FavoritesList extends Component {
         <div className="favorite_videos_list">
           {this.favoriteVideosCard(videos)}
         </div>
-        <ModalComponent />
+        <ModalComponent/>
       </div>
     );
   }

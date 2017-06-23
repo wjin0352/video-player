@@ -5,19 +5,18 @@ import { closeModal } from './modalActions';
 import { deleteVideo } from '../deleteVideo/deleteVideoAction';
 import variables from '../../utils/variables.client';
 
-const ModalComponent = ({
-  modalVideo: { show, title, url, description, publishedAt, _id },
-  closeModal,
-  deleteVideo
-}) => {
-  return (
-    <div className="modal">
+class ModalComponent extends Component {
+  bootStrapModal() {
+    const { show, title, url, description, publishedAt, _id } = this.props.modalVideo;
+    const closeModal = this.props.closeModal;
+    const deleteVideo = this.props.deleteVideo;
+    return (
       <Modal className="video-modal" show={show}  aria-labelledby="contained-modal-title-lg">
         <Modal.Header>
           <Modal.Title id="contained-modal-title-lg">{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="iframe_modal_video">
+          <div className="iframe_modal_video modal_body">
             <p className="modal-para">{description}</p>
             <iframe className='iframe-video-feed' src={`${variables.YOUTUBE_URL}${url}`}
             allowFullScreen>
@@ -29,7 +28,7 @@ const ModalComponent = ({
           <div className="modal-buttons">
             <Button
               onClick={() => closeModal()}
-              className="btn btn-default"
+              className="btn btn-default modal_button1"
               >
               Close
             </Button>
@@ -38,15 +37,23 @@ const ModalComponent = ({
               onClick={() => {
                 deleteVideo(_id)
               }}
-              className="btn btn-danger"
+              className="btn btn-danger modal_button2"
               >
               Delete
             </Button>
           </div>
         </Modal.Footer>
       </Modal>
-    </div>
-  );
+    );
+  }
+
+  render() {
+    return (
+      <div className="modal_container">
+        {this.bootStrapModal()}
+      </div>
+    );
+  }
 }
 
 function mapStateToProps(state) {
