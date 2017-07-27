@@ -1,10 +1,14 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import SearchBar from '../components/search_bar';
+import MainPage from '../components/main_page';
+import VideoList from '../components/video_list';
 
 // test is global jest function
-test('Search renders correctly', () => {
-  const component = renderer.create(<SearchBar/>)
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+test('Searchbar renders correctly', () => {
+  const component = shallow(<SearchBar/>)
+  expect(component).toMatchSnapshot();
 });
+
+
+

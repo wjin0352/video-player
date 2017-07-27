@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage renders correctly 1`] = `
+<div
+  className="main_page"
+>
+  <SearchBar
+    onSearchTermChange={[Function]}
+  />
+  <container
+    className="videos_container z-depth-5"
+  >
+    <Connect(VideoDetail)
+      video={null}
+    />
+    <VideoList
+      onVideoSelect={[Function]}
+      videos={Array []}
+    />
+    <div />
+  </container>
+</div>
+`;
