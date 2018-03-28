@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import _ from 'lodash';
@@ -16,7 +18,6 @@ class MainPage extends Component {
       videos: [],
       selectedVideo: null
     };
-
     this.videoSearch('movie trailers');
   }
 
@@ -33,6 +34,7 @@ class MainPage extends Component {
   render() {
     const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
     const { selectedVideo, videos } = this.state;
+    console.log( 'this.state:', this.state )
 
     return (
       <div className="main_page">
@@ -48,5 +50,5 @@ class MainPage extends Component {
     );
   }
 }
-
+ 
 export default MainPage;

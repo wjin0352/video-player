@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 // For material ui access wrap child components in MuiThemeProvider
