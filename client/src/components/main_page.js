@@ -7,7 +7,9 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './search_bar';
 import VideoList from './video_list';
-import VideoDetail from '../modules/createVideo/video_detail';
+import VideoDetail from 
+'../modules/createVideo/video_detail';
+
 import variables from '../utils/variables.client';
 
 class MainPage extends Component {
